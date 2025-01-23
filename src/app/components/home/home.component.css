@@ -1,0 +1,31 @@
+.home-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    max-width: 800px;
+  }
+  
+  h1 {
+    color: #3f51b5;
+  }
+  
+  p {
+    color: #333;
+    font-size: 1.2em;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    background-color: #e0f7fa;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 4px;
+  }
+  

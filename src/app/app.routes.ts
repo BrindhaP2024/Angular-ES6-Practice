@@ -5,6 +5,11 @@ import { ComponentServiceComponent } from './components/component-service/compon
 import { InjectbasedDIComponent } from './components/injectbased-di/injectbased-di.component';
 import { TdfExampleComponent } from './components/tdf-example/tdf-example.component';
 import { RdfExampleComponent } from './components/rdf-example/rdf-example.component';
+import { ChildComponent } from './components/child/child.component';
+import { ParentComponent } from './components/parent/parent.component';
+import { LifecycleComponent } from './components/lifecycle/lifecycle.component';
+import { style } from '@angular/animations';
+import { StyleComponent } from './components/style/style.component';
 
 export const routes: Routes = [
     {path: '', component: HomeComponent, pathMatch: 'full', title: 'App Home Page' },
@@ -32,11 +37,28 @@ export const routes: Routes = [
         path:'rdf-example',
         component:RdfExampleComponent,
     },
+    {
+        path:'child',
+        component:ChildComponent,
+    },
+    {
+        path:'parent',
+        component:ParentComponent,
+    },
+    {
+        path:'lifecycle',
+        component:LifecycleComponent,
+    },
+    {
+        path:'style',
+        component:StyleComponent,
+    },
   
     { 
         path: '**', 
         component:HomeComponent, 
         title: 'Not Found'
     },
+
   
 ];

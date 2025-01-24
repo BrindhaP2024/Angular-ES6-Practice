@@ -1,20 +1,23 @@
-import { Component, OnInit, Inject } from '@angular/core';
-import { InjectDIService } from '../../Service/inject-di.service';
+import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { InjectDIService } from '../../Service/inject-di.service';
 
 @Component({
   selector: 'app-injectbased-di',
-  imports:[CommonModule],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './injectbased-di.component.html',
-  styleUrls: ['./injectbased-di.component.css'] 
+  styleUrls: ['./injectbased-di.component.css']
 })
 export class InjectbasedDIComponent implements OnInit {
-    data: string[] = [];
-  
-    // Property-based injection using @Inject
-    @Inject(InjectDIService) private injectdiservice!: InjectDIService;
-  
-    ngOnInit() {
-        this.data = this.injectdiservice.getData();
+  data: string[] = [];
+  private injectdiservice = inject(InjectDIService);
+
+  ngOnInit() {
+    if (this.injectdiservice) {
+      this.data = this.injectdiservice.getData();
+    } else {
+      console.error('InjectDIService is not injected!');
     }
+  }
 }

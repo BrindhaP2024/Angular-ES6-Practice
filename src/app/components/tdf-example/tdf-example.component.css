@@ -1,0 +1,55 @@
+form {
+    background-color: #f0ecec;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(178, 76, 76, 0.1);
+    max-width: 400px;
+    margin: 40px 400px;
+    font-family: 'Arial', sans-serif;
+    align-items: center;
+}
+
+form div {
+    margin-bottom: 15px;
+    
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color:blue;
+}
+
+form input[type="text"],
+form input[type="email"] {
+    width: calc(100% - 20px); 
+    padding: 10px;
+    border: 1px solid wheat;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus {
+    border-color:pink;
+    outline: none;
+}
+
+form button {
+    background-color:aquamarine;
+    color: rgb(164, 62, 62);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form button:hover {
+    background-color: #357ABD;
+}
+
+form button:active {
+    background-color: #57be61;
+}

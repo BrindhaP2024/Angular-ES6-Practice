@@ -8,8 +8,9 @@ import { RdfExampleComponent } from './components/rdf-example/rdf-example.compon
 import { ChildComponent } from './components/child/child.component';
 import { ParentComponent } from './components/parent/parent.component';
 import { LifecycleComponent } from './components/lifecycle/lifecycle.component';
-import { style } from '@angular/animations';
 import { StyleComponent } from './components/style/style.component';
+import { SelectorsComponent } from './components/selectors/selectors.component';
+import { SampleSelectorComponent } from './components/sample-selector/sample-selector.component';
 
 export const routes: Routes = [
     {path: '', component: HomeComponent, pathMatch: 'full', title: 'App Home Page' },
@@ -52,6 +53,14 @@ export const routes: Routes = [
     {
         path:'style',
         component:StyleComponent,
+    },
+    {
+        path:'selectors',
+        component:SelectorsComponent,
+    },
+    {
+        path:'sample-selector',
+        component:SampleSelectorComponent,
     },
   
     { 

@@ -6,7 +6,7 @@ import { ChildComponent } from '../child/child.component';
   templateUrl: './parent.component.html',
   styleUrls: ['./parent.component.css'],
   standalone: true,
-  imports: [ChildComponent],
+  imports: [],
 })
 export class ParentComponent {
   productName = 'Laptop';

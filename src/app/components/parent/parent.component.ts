@@ -1,17 +1,17 @@
 import { Component } from '@angular/core';
-import { ChildComponent } from '../child/child.component';
+import { ChildComponent } from "../child/child.component";
 
 @Component({
   selector: 'app-parent',
+  imports: [ChildComponent],
   templateUrl: './parent.component.html',
-  styleUrls: ['./parent.component.css'],
-  standalone: true,
-  imports: [],
+  styleUrl: './parent.component.css'
 })
 export class ParentComponent {
-  productName = 'Laptop';
-  productPrice = 1000;
-  productDescription = '   High-performance laptop   ';
-  productStock = 50;
-  productDiscountedPrice = this.productPrice * 0.9;
+    parentMessage: string = 'Hello Child! This is a message from your Parent component.';
+    childMessage: string | undefined;
+  
+    receiveMessage(event: string) {
+      this.childMessage = event;
+    }  
 }

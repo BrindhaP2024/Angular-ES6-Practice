@@ -1,6 +1,6 @@
 <p>child works!</p>
 <div>
-    <p>Message from Parent: {{messageFromParent}}</p>
-    <button (click)="sendMessageToParent()">Send Message to Parent</button>
-  </div>
-  
+  <p>{{ commonData }}</p>
+  <button (click)="sharedMethod()">Call Shared Method</button>
+  <button (click)="sendMessageToParent()">Send Message to Parent</button>
+</div>

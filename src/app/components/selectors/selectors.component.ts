@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { SampleSelectorComponent } from "../sample-selector/sample-selector.component";
+import { CardComponent } from '../card/card.component';
 
 @Component({
   selector: 'app-selectors',

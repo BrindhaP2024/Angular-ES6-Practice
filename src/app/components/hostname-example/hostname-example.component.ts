@@ -1,8 +1,9 @@
 import { Component, HostBinding, HostListener } from '@angular/core';
+import { HostnameCustomComponent } from "../hostname-custom/hostname-custom.component";
 
 @Component({
   selector: 'app-hostname-example',
-  imports: [],
+  imports: [HostnameCustomComponent],
   templateUrl: './hostname-example.component.html',
   styleUrl: './hostname-example.component.css',
   host: {

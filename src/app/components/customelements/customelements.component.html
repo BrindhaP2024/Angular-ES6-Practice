@@ -1,0 +1,13 @@
+<!-- customelements.component.html -->
+<p>{{ widgetInput }}</p>
+<div class="row">
+  <input type="number" [(ngModel)]="number1" placeholder="Number 1" />
+  <input type="number" [(ngModel)]="number2" placeholder="Number 2" />
+</div>
+<div class="row">
+  <button (click)="add()">Add</button>
+  <button (click)="subtract()">Subtract</button>
+  <button (click)="multiply()">Multiply</button>
+  <button (click)="divide()">Divide</button>
+</div>
+<p>Result: {{ result }}</p>

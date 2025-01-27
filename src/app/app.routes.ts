@@ -13,6 +13,12 @@ import { ChildComponent } from './components/child/child.component';
 import { ParentComponent } from './components/parent/parent.component';
 import { CardComponent } from './components/card/card.component';
 import { HostnameExampleComponent } from './components/hostname-example/hostname-example.component';
+import { AdminBioComponent } from './components/Dynamic rendering/admin-bio/admin-bio.component';
+import { StandardBioComponent } from './components/Dynamic rendering/standard-bio/standard-bio.component';
+import { NgComponentOutletComponent } from './components/Dynamic rendering/ng-component-outlet/ng-component-outlet.component';
+import { ViewContainerRefComponent } from './components/Dynamic rendering/view-container-ref/view-container-ref.component';
+import { DynamicRenderingComponent } from './components/dynamic-rendering/dynamic-rendering.component';
+import { CustomelementsComponent } from './components/customelements/customelements.component';
 
 
 export const routes: Routes = [
@@ -72,6 +78,30 @@ export const routes: Routes = [
     {
         path:'hostname-example',
         component:HostnameExampleComponent,
+    },
+    {
+        path:'ng-component-outlet',
+        component:NgComponentOutletComponent
+    },
+    {
+        path:'admin-bio',
+        component:AdminBioComponent,
+    },
+    {
+        path:'standard-bio',
+        component:StandardBioComponent,
+    },
+    {
+        path:'view-container-ref',
+        component:ViewContainerRefComponent,
+    },
+    {
+        path:'Dynamic-rendering',
+        component:DynamicRenderingComponent,
+    },
+    {
+        path:'customelement',
+        component:CustomelementsComponent,
     },
     { 
         path: '**', 

@@ -11,13 +11,20 @@
     <li><a routerLink="/lifecycle">Lifecycle</a></li> 
     <li><a routerLink="/style">Styles</a></li>
     <li><a routerLink="/selectors">Selectors</a></li>
+    <li><a routerLink="/card">Content Projection</a></li>
+    <li><a routerLink="hostname-example">HostExample</a></li>
 
   </ul>
 </nav>
-<app-card>
-  <div class="card-title">Card Title</div>
-  <div class="card-body">This is the body of the card.</div>
-</app-card>
-<app-card></app-card>
-
 <router-outlet></router-outlet>
+<app-card>
+  <div class="card-title">Content is projecting here</div>
+  <div class="card-body">Types<br>
+    1.Single slot content Projection<br>
+    2.Multi-slot content Projection<br>
+    3.Conditional content Projection<br>
+    4.Conditional content Projection<br>
+  
+  </div>
+</app-card>
+

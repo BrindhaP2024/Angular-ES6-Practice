@@ -20,6 +20,9 @@ import { ViewContainerRefComponent } from './components/Dynamic rendering/view-c
 import { DynamicRenderingComponent } from './components/dynamic-rendering/dynamic-rendering.component';
 import { CustomelementsComponent } from './components/customelements/customelements.component';
 import { BindingsComponent } from './components/bindings/bindings.component';
+import { Z_VERSION_ERROR } from 'node:zlib';
+import { PipesComponent } from './components/pipes/pipes.component';
+import { TwoWayBindingComponent } from './components/two-way-binding/two-way-binding.component';
 
 
 export const routes: Routes = [
@@ -108,6 +111,15 @@ export const routes: Routes = [
         path:'binding',
         component:BindingsComponent,
     },
+    {
+        path:'pipes',
+        component:PipesComponent,
+    },
+    {
+        path:'two-way binding',
+        component:TwoWayBindingComponent,
+    },
+     
     { 
         path: '**', 
         component:HomeComponent, 

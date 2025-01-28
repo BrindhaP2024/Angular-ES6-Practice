@@ -1,0 +1,18 @@
+<p>two-way-binding works!</p>
+<div>
+    <h2>Enter your name:</h2>
+    
+    <!-- ngModel creates two-way data binding -->
+    <input [(ngModel)]="name" placeholder="Type your name">
+  
+    <p>Your name is: {{ name }}</p> <!-- Display the value of 'name' -->
+  </div>
+
+  <h2>Parent Component A</h2>
+
+  <!-- Pass data to child component and listen for changes -->
+
+  <app-bindings>[(data) = "dataFromParent"></app-bindings>
+
+  <p>Data in Parent Component: {{ dataFromParent }}</p>
+  

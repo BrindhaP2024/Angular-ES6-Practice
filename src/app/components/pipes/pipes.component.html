@@ -1,0 +1,38 @@
+<p>pipes works!</p>
+<h3>Learning Angular {{text | uppercase }}</h3>
+<h3>I bought this book around the price {{price | currency}} and purchased on {{purchasedOn | date | uppercase}}</h3>
+
+<!-- Multiple pipes usage  -->
+
+<p>pipes works!</p>
+<h3>Learning Angular {{ text | uppercase }}</h3>
+<h3>I bought this book around the price {{ price | currency:'USD' | lowercase }}</h3>
+<h3>Purchased on: {{ purchasedOn | date:'fullDate' | uppercase }}</h3>
+<h3>Discount: {{ discount | percent:'1.0-2' }}</h3>
+
+<!-- Passing params inside the pipe -->
+
+<p>Price: {{ price | currency:'INR' }}</p>
+
+
+<p>Purchased on: {{ purchasedOn | date:'shortDate' }}</p>
+<h3>Purchased on: {{ purchasedOn | date:'fullDate' }}</h3>
+
+<!-- operator precedence  -->
+
+<!-- <p>{{ (null ?? 100 + 50) | currency }}</p>  <!-- Expected: $150.00 -->
+
+<!-- <p>{{ (100 > 50 ? 100 * 2 : 10 + 5) && 100 || null ?? 50 | currency }}</p>  Expected: $100.00 -->
+
+ 
+ <!--  -->
+ <p>{{ 'trying text reverse in custom pipes' | customPipes }}</p>
+
+ <div>
+    <!-- Display the transformed text using the custom pipe -->
+    <h3>Text Transformation (Uppercase):</h3>
+    <p>{{ text | myCustomTransformation:format }}</p> <!-- Use the custom pipe -->
+  
+    <hr />
+</div>
+

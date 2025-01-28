@@ -19,6 +19,7 @@ import { NgComponentOutletComponent } from './components/Dynamic rendering/ng-co
 import { ViewContainerRefComponent } from './components/Dynamic rendering/view-container-ref/view-container-ref.component';
 import { DynamicRenderingComponent } from './components/dynamic-rendering/dynamic-rendering.component';
 import { CustomelementsComponent } from './components/customelements/customelements.component';
+import { BindingsComponent } from './components/bindings/bindings.component';
 
 
 export const routes: Routes = [
@@ -102,6 +103,10 @@ export const routes: Routes = [
     {
         path:'customelement',
         component:CustomelementsComponent,
+    },
+    {
+        path:'binding',
+        component:BindingsComponent,
     },
     { 
         path: '**', 

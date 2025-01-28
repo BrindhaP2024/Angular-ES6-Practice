@@ -67,7 +67,8 @@
               "buildTarget": "Angular-test-app:build:production"
             },
             "development": {
-              "buildTarget": "Angular-test-app:build:development"
+              "buildTarget": "Angular-test-app:build:development",
+               "hmr":false
             }
           },
           "defaultConfiguration": "development"

@@ -12,22 +12,27 @@
     <li><a routerLink="/style">Styles</a></li>
     <li><a routerLink="/selectors">Selectors</a></li>
     <li><a routerLink="/card">Content Projection</a></li>
-    <li><a routerLink="hostname-example">HostExample</a></li>
+    <li><a routerLink="/hostname-example">HostExample</a></li>
     <li><a routerLink="/ng-component-outlet">Dynamic rendering</a></li>
     <li><a routerLink="/view-container-ref">Dynamic rendering</a></li>
     <li><a routerLink="/customelement">Custom elements</a></li>
-
+    <li><a routerLink="/binding">Binding</a></li>
   </ul>
 </nav>
+
 <router-outlet></router-outlet>
-<app-card>
+
+<!-- <app-card>
   <div class="card-title">Content is projecting here</div>
   <div class="card-body">Types<br>
     1.Single slot content Projection<br>
     2.Multi-slot content Projection<br>
     3.Conditional content Projection<br>
     4.Conditional content Projection<br>
-  
   </div>
-</app-card>
+</app-card> -->
 
+<div class="center-content">
+  <h1>HMR USAGE</h1>
+  <input type="text" [(ngModel)]="hmrUpdates">
+</div>

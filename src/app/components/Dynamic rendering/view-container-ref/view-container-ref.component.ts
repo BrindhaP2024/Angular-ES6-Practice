@@ -3,7 +3,7 @@ import { DynamicRenderingComponent } from '../../dynamic-rendering/dynamic-rende
 
 @Component({
   selector: 'app-view-container-ref',
-  imports: [DynamicRenderingComponent],
+  imports: [],
   templateUrl: './view-container-ref.component.html',
   styleUrl: './view-container-ref.component.css'
 })

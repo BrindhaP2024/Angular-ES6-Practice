@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { BindingsComponent } from '../bindings/bindings.component';
+import { BindingsComponent } from '../bindings.component';
 
 
 @Component({

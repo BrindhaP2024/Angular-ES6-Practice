@@ -10,6 +10,8 @@
 <h3>Purchased on: {{ purchasedOn | date:'fullDate' | uppercase }}</h3>
 <h3>Discount: {{ discount | percent:'1.0-2' }}</h3>
 
+
+
 <!-- Passing params inside the pipe -->
 
 <p>Price: {{ price | currency:'INR' }}</p>
@@ -17,6 +19,12 @@
 
 <p>Purchased on: {{ purchasedOn | date:'shortDate' }}</p>
 <h3>Purchased on: {{ purchasedOn | date:'fullDate' }}</h3>
+
+<h1>{{ title }}</h1>
+
+<h3>Users Array in JSON Format:</h3>
+<pre>{{ users | json }}</pre>
+
 
 <!-- operator precedence  -->
 

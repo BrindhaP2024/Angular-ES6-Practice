@@ -17,12 +17,11 @@ import { AdminBioComponent } from './components/Dynamic rendering/admin-bio/admi
 import { StandardBioComponent } from './components/Dynamic rendering/standard-bio/standard-bio.component';
 import { NgComponentOutletComponent } from './components/Dynamic rendering/ng-component-outlet/ng-component-outlet.component';
 import { ViewContainerRefComponent } from './components/Dynamic rendering/view-container-ref/view-container-ref.component';
-import { DynamicRenderingComponent } from './components/dynamic-rendering/dynamic-rendering.component';
 import { CustomelementsComponent } from './components/customelements/customelements.component';
 import { BindingsComponent } from './components/bindings/bindings.component';
-import { Z_VERSION_ERROR } from 'node:zlib';
 import { PipesComponent } from './components/pipes/pipes.component';
-import { TwoWayBindingComponent } from './components/two-way-binding/two-way-binding.component';
+import { TwoWayBindingComponent } from './components/bindings/two-way-binding/two-way-binding.component';
+
 
 
 export const routes: Routes = [
@@ -99,10 +98,10 @@ export const routes: Routes = [
         path:'view-container-ref',
         component:ViewContainerRefComponent,
     },
-    {
-        path:'Dynamic-rendering',
-        component:DynamicRenderingComponent,
-    },
+    // {
+    //     path:'Dynamic-rendering',
+    //     component:DynamicRenderingComponent,
+    // },
     {
         path:'customelement',
         component:CustomelementsComponent,

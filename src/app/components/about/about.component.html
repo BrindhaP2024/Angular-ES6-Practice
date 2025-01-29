@@ -1,26 +1,39 @@
 <div class="container">
-    <header>
-      <h1>About Angular</h1>
-      <p>An Overview of Angular and Its Key Features</p>
-    </header>
-    
-    <section class="introduction">
-      <h2>What is Angular?</h2>
-      <p>Angular is a platform and framework for building single-page client applications using HTML and TypeScript. It is developed and maintained by Google.</p>
-    </section>
-    
-    <section class="features">
-      <h2>Key Features of Angular</h2>
-      <ul>
-        <li><strong>Component-Based Architecture:</strong> Build encapsulated components for reusable UI pieces.</li>
-        <li><strong>Two-Way Data Binding:</strong> Automatically synchronize data between the model and the view.</li>
-        <li><strong>Dependency Injection:</strong> Manage your app’s dependencies efficiently.</li>
-        <li><strong>Routing:</strong> Create a navigable application with Angular's powerful router.</li>
-        <li><strong>Forms and Validation:</strong> Easily handle user input and validations.</li>
-        <li><strong>Directives:</strong> Extend HTML with custom attributes and elements.</li>
-        <li><strong>Services:</strong> Share data and logic across components.</li>
-        <li><strong>Testing:</strong> Built-in support for unit testing and end-to-end testing.</li>
-      </ul>
-    </section>
-  </div>
-  
+  <header>
+    <h1>About Angular</h1>
+    <p>An Overview of Angular and Its Key Features</p>
+  </header>
+
+  <section class="introduction">
+    <h2>What is Angular?</h2>
+    <p>Angular is a platform and framework for building single-page client applications using HTML and TypeScript. It is developed and maintained by Google.</p>
+  </section>
+
+  <section class="features">
+    <h2>Key Features of Angular</h2>
+    <ul>
+      <li><strong>Component-Based Architecture:</strong> Build encapsulated components for reusable UI pieces.</li>
+      <li><strong>Two-Way Data Binding:</strong> Automatically synchronize data between the model and the view.</li>
+      <li><strong>Dependency Injection:</strong> Manage your app’s dependencies efficiently.</li>
+      <li><strong>Routing:</strong> Create a navigable application with Angular's powerful router.</li>
+      <li><strong>Forms and Validation:</strong> Easily handle user input and validations.</li>
+      <li><strong>Directives:</strong> Extend HTML with custom attributes and elements.</li>
+      <li><strong>Services:</strong> Share data and logic across components.</li>
+      <li><strong>Testing:</strong> Built-in support for unit testing and end-to-end testing.</li>
+    </ul>
+  </section>
+</div>
+
+<!-- Event listeners -->
+<h4>Event Listeners</h4>
+<input type="text" (keyup)="updateField($event)"/>
+<br>
+<input type="text" (keypress)="updateKey($event)"/>
+<br>
+<br>
+<input type="text" (keypress)="updateKey1($event)"/>
+<br>
+
+<input type="button" value="Double click" class="btn" (dblclick)="doubleClick()"/>
+<br>
+<input type="button" value="Hover" class="btn1" (mouseenter)="onHover($event)"/>

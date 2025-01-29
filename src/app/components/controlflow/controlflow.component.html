@@ -1,0 +1,74 @@
+<div class="container">
+    <h1 class="text-center">Control Flow Works!</h1>
+    
+    <!-- Conditional Rendering using *ngIf -->
+    <div *ngIf="a > b">
+      <p>{{ a }} is greater than {{ b }}</p>
+    </div>
+  
+    <!-- Row 1 -->
+    <div class="row">
+      <div class="col-3">
+        <button class="btn btn-success mb-2" (click)="toggleDiv1()">Show</button>
+        <div *ngIf="showDiv1" class="bg-primary p-3 text-white text-center">
+          Div 1
+        </div>
+      </div>
+    </div>
+  
+    <!-- Row 2 -->
+    <div class="row">
+      <div class="col-3">
+        <div class="bg-primary p-3 text-white text-center">
+          Div 2
+        </div>
+      </div>
+    </div>
+  <br>
+    <!-- Row 3 with Toggle Button -->
+    <div class="row">
+      <div class="col-3">
+        <button class="btn btn-success mb-2" (click)="toggleDiv3()">Show</button>
+        
+        <div *ngIf="showDiv3" class="bg-primary p-3 text-white text-center">
+          Div 3
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <h1 class="text-center">Shapes Example</h1>
+    
+    <!-- Buttons to toggle shapes -->
+    <div class="button-group">
+      <button class="btn btn-primary" (click)="toggleShape('circle')">Show Circle</button>
+      <button class="btn btn-primary" (click)="toggleShape('square')">Show Square</button>
+      <button class="btn btn-primary" (click)="toggleShape('triangle')">Show Triangle</button>
+      <button class="btn btn-primary" (click)="toggleShape('rectangle')">Show Rectangle</button>
+    </div>
+  
+    <!-- Shapes -->
+    <ng-container *ngIf="showCircle; else elseSquare">
+      <div class="shape circle"></div>
+    </ng-container>
+    
+    <ng-template #elseSquare>
+      <ng-container *ngIf="showSquare; else elseTriangle">
+        <div class="shape square"></div>
+      </ng-container>
+    </ng-template>
+  
+    <ng-template #elseTriangle>
+      <ng-container *ngIf="showTriangle; else elseRectangle">
+        <div class="shape triangle"></div>
+      </ng-container>
+    </ng-template>
+  
+    <ng-template #elseRectangle>
+      <ng-container *ngIf="showRectangle">
+        <div class="shape rectangle"></div>
+      </ng-container>
+    </ng-template>
+  </div>
+  <app-controlflow-example></app-controlflow-example>
+  

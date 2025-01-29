@@ -1,0 +1,52 @@
+<p>controlflow-example works!</p>
+<div class="container">
+  <h1 class="text-center">Combined Example</h1>
+
+  <!-- Conditional Rendering using *ngIf, *ngIf else, and *ngIf elseif -->
+  <div *ngIf="a > b; else elseBlock1">
+    <p>{{ a }} is greater than {{ b }}</p>
+  </div>
+  <ng-template #elseBlock1>
+    <div *ngIf="b > a; else elseBlock2">
+      <p>{{ b }} is greater than {{ a }}</p>
+    </div>
+  </ng-template>
+  <ng-template #elseBlock2>
+    <p>{{ a }} is equal to {{ b }}</p>
+  </ng-template>
+
+  <!-- Iterating using *ngFor -->
+  <h2>Items List</h2>
+  <ul>
+    <li *ngFor="let item of items; trackBy: trackById">
+      {{ item.name }}
+    </li>
+  </ul>
+
+  <!-- Switch case using *ngSwitch -->
+  <h2>User Dashboard</h2>
+  <div [ngSwitch]="userPermissions">
+    <div *ngSwitchCase="'admin'">Admin Dashboard</div>
+    <div *ngSwitchCase="'reviewer'">Reviewer Dashboard</div>
+    <div *ngSwitchCase="'editor'">Editor Dashboard</div>
+    <div *ngSwitchDefault>Viewer Dashboard</div>
+  </div>
+
+  <!-- Shapes Example -->
+  <h2>Select a Shape</h2>
+  <div class="button-group">
+    <button class="btn btn-primary" (click)="selectShape('circle')">Show Circle</button>
+    <button class="btn btn-primary" (click)="selectShape('square')">Show Square</button>
+    <button class="btn btn-primary" (click)="selectShape('triangle')">Show Triangle</button>
+    <button class="btn btn-primary" (click)="selectShape('rectangle')">Show Rectangle</button>
+  </div>
+
+  <!-- Shapes Display -->
+  <div [ngSwitch]="selectedShape">
+    <div *ngSwitchCase="'circle'" class="shape circle"></div>
+    <div *ngSwitchCase="'square'" class="shape square"></div>
+    <div *ngSwitchCase="'triangle'" class="shape triangle"></div>
+    <div *ngSwitchCase="'rectangle'" class="shape rectangle"></div>
+    <div *ngSwitchDefault>Select a shape to display</div>
+  </div>
+</div>

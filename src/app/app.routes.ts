@@ -21,6 +21,7 @@ import { CustomelementsComponent } from './components/customelements/customeleme
 import { BindingsComponent } from './components/bindings/bindings.component';
 import { PipesComponent } from './components/pipes/pipes.component';
 import { TwoWayBindingComponent } from './components/bindings/two-way-binding/two-way-binding.component';
+import { ControlflowComponent } from './components/controlflow/controlflow.component';
 
 
 
@@ -118,8 +119,12 @@ export const routes: Routes = [
         path:'two-way binding',
         component:TwoWayBindingComponent,
     },
-     
-    { 
+    {
+        path:'controlflow',
+        component:ControlflowComponent,
+    },
+   
+     { 
         path: '**', 
         component:HomeComponent, 
         title: 'Not Found'

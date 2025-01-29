@@ -22,6 +22,7 @@ import { BindingsComponent } from './components/bindings/bindings.component';
 import { PipesComponent } from './components/pipes/pipes.component';
 import { TwoWayBindingComponent } from './components/bindings/two-way-binding/two-way-binding.component';
 import { ControlflowComponent } from './components/controlflow/controlflow.component';
+import { NgTemplateComponent } from './components/ng-template/ng-template.component';
 
 
 
@@ -122,6 +123,10 @@ export const routes: Routes = [
     {
         path:'controlflow',
         component:ControlflowComponent,
+    },
+    {
+        path:'ng-template',
+        component:NgTemplateComponent,
     },
    
      { 

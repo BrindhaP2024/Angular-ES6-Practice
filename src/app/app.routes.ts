@@ -1,3 +1,4 @@
+import { Directive } from '@angular/core';
 import { Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
@@ -23,24 +24,27 @@ import { PipesComponent } from './components/pipes/pipes.component';
 import { TwoWayBindingComponent } from './components/bindings/two-way-binding/two-way-binding.component';
 import { ControlflowComponent } from './components/controlflow/controlflow.component';
 import { NgTemplateComponent } from './components/ng-template/ng-template.component';
+import { StructuralDirectiveComponent } from './components/Directives/structural-directive/structural-directive.component';
+import { DIrectivesComponent } from './components/Directives/directives/directives.component';
+import { CustomDirectiveDirective } from './components/custom-directive.directive';
 
 
 
 export const routes: Routes = [
     {path: '', component: HomeComponent, pathMatch: 'full', title: 'App Home Page' },
-    
-    {   path: 'home',    
-        title: 'App Home Page',    
-        component:HomeComponent,  
+
+    {   path: 'home',
+        title: 'App Home Page',
+        component:HomeComponent,
     },
-    {   path: 'about', 
-        component: AboutComponent, 
+    {   path: 'about',
+        component: AboutComponent,
         title: 'About' },
-    {  
+    {
         path:'component-service',
         component:ComponentServiceComponent,
     },
-    { 
+    {
         path:'injectbasedDI',
         component:InjectbasedDIComponent,
     },
@@ -128,12 +132,24 @@ export const routes: Routes = [
         path:'ng-template',
         component:NgTemplateComponent,
     },
-   
-     { 
-        path: '**', 
-        component:HomeComponent, 
+    {
+      path:'structural-directive',
+      component:StructuralDirectiveComponent,
+  },
+  {
+    path:'directive',
+    component:DIrectivesComponent,
+  },
+  {
+    path:'custom-directive',
+    component:CustomDirectiveDirective,
+  },
+
+    {
+        path: '**',
+        component:HomeComponent,
         title: 'Not Found'
     },
 
-  
+
 ];

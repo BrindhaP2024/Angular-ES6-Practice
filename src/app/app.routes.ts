@@ -27,6 +27,7 @@ import { NgTemplateComponent } from './components/ng-template/ng-template.compon
 import { StructuralDirectiveComponent } from './components/Directives/structural-directive/structural-directive.component';
 import { DIrectivesComponent } from './components/Directives/directives/directives.component';
 import { CustomDirectiveDirective } from './components/custom-directive.directive';
+import { DataListComponent } from './components/data-list/data-list.component';
 
 
 
@@ -140,16 +141,19 @@ export const routes: Routes = [
     path:'directive',
     component:DIrectivesComponent,
   },
+  // {
+  //   path:'custom-directive',
+  //   component:CustomDirectiveDirective,
+  // },
   {
-    path:'custom-directive',
-    component:CustomDirectiveDirective,
+    path:'data-list',
+    component:DataListComponent,
   },
-
-    {
+  {
         path: '**',
         component:HomeComponent,
         title: 'Not Found'
-    },
+  },
 
 
 ];

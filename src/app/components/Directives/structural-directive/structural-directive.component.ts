@@ -6,7 +6,7 @@ import { CustomDirectiveDirective } from '../../custom-directive.directive';
 @Component({
   selector: 'app-structural-directive',
   standalone: true, // Add standalone: true
-  imports: [CommonModule, FormsModule, CustomDirectiveDirective],
+  imports: [CommonModule, FormsModule],
   templateUrl: './structural-directive.component.html',
   styleUrls: ['./structural-directive.component.css']
 })

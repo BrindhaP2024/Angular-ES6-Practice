@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-signal-example',
@@ -8,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class SignalExampleComponent {
 
+  count = signal(0);
+
+  increment(): void {
+    this.count.set(this.count() + 1);
+  }
 }
+
+
+

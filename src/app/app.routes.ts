@@ -28,6 +28,7 @@ import { StructuralDirectiveComponent } from './components/Directives/structural
 import { DIrectivesComponent } from './components/Directives/directives/directives.component';
 import { CustomDirectiveDirective } from './components/custom-directive.directive';
 import { DataListComponent } from './components/data-list/data-list.component';
+import { SignalExampleComponent } from './components/signal-example/signal-example.component';
 
 
 
@@ -148,6 +149,10 @@ export const routes: Routes = [
   {
     path:'data-list',
     component:DataListComponent,
+  },
+  {
+    path:'signal-example',
+    component:SignalExampleComponent
   },
   {
         path: '**',

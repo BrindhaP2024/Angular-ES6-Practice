@@ -1,3 +1,12 @@
 <p>signal-example works!</p>
+
+<!-- Display the current count -->
 <p>The count is: {{ count() }}</p>
 <button (click)="increment()">Increment</button>
+
+<!-- Display computed total price -->
+<p>Total: {{ totalPrice() }}</p>
+
+<!-- Display and change the user ID -->
+<h1>User ID: {{ userService.getUserId() }}</h1>
+<button (click)="changeUserId()">Change User ID</button>

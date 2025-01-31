@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { DataService } from '../../Services/data.service';
 import { FormsModule } from '@angular/forms';
 import { NgFor } from '@angular/common';
+import { DataService } from '../../Service/data.service';
 
 @Component({
   selector: 'app-data-list',

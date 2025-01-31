@@ -4,6 +4,7 @@ import { CardComponent } from "./components/card/card.component";
 import { ParentComponent } from "./components/parent/parent.component";
 import { FormsModule } from '@angular/forms';
 import { NgTemplateComponent } from "./components/ng-template/ng-template.component";
+import { SignalExampleComponent } from "./components/signal-example/signal-example.component";
 
 
 @Component({

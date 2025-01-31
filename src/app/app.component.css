@@ -46,7 +46,7 @@ body {
 /* Center content styling */
 .center-content {
   text-align: center;
-  padding: 100px 20px; /* Adjusted padding to compensate for fixed navbar */
+  padding: 100px 20px;
 }
 
 .center-content h1 {

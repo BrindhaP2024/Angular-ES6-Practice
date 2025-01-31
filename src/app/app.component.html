@@ -1,5 +1,12 @@
+<!-- Top Navbar for Titles -->
+<!-- <nav class="top-navbar">
+  <div class="top-nav-title">Learning Angular</div>
+  <div class="top-nav-title">MEAN Stack Development</div>
+</nav> -->
+`
+<!-- Main Sidebar Navigation (Vertical Right Sidebar) -->
 <nav class="navbar">
-  <ul>
+  <ul class="navbar-list">
     <li><a routerLink="/home">Home</a></li>
     <li><a routerLink="/about">About</a></li>
     <li><a routerLink="/component-service">Constructor Service</a></li>
@@ -19,26 +26,16 @@
     <li><a routerLink="/binding">Binding</a></li>
     <li><a routerLink="/two-way binding">Two-way-binding</a></li>
     <li><a routerLink="/signal-example">Signals</a></li>
+    <li><a routerLink="/signals-rxjs">signals-rxjs</a></li>
   </ul>
 </nav>
 
 <router-outlet></router-outlet>
-<!-- <app-signal-example></app-signal-example> -->
 
-<!-- <app-card>
-  <div class="card-title">Content is projecting here</div>
-  <div class="card-body">Types<br>
-    1.Single slot content Projection<br>
-    2.Multi-slot content Projection<br>
-    3.Conditional content Projection<br>
-    4.Conditional content Projection<br>
-  </div>
-</app-card> -->
 
-<div class="center-content">
+<router-outlet></router-outlet>
+
+<!-- <div class="center-content">
   <h1>HMR USAGE</h1>
   <input type="text" [(ngModel)]="hmrUpdates">
-</div>
-
-
-<!-- <app-ng-template></app-ng-template> -->
+</div> -->

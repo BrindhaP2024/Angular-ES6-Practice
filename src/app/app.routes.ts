@@ -29,6 +29,7 @@ import { DIrectivesComponent } from './components/Directives/directives/directiv
 import { CustomDirectiveDirective } from './components/custom-directive.directive';
 import { DataListComponent } from './components/data-list/data-list.component';
 import { SignalExampleComponent } from './components/signal-example/signal-example.component';
+import { SignalsRxjsComponent } from './components/signals-rxjs/signals-rxjs.component';
 
 
 
@@ -153,6 +154,10 @@ export const routes: Routes = [
   {
     path:'signal-example',
     component:SignalExampleComponent
+  },
+  {
+  path:'signal-rxjs',
+  component:SignalsRxjsComponent
   },
   {
         path: '**',

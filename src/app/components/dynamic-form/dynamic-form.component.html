@@ -1,0 +1,33 @@
+<div class="container">
+  <h2>Dynamic Form Example</h2>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="name">Name:</label>
+      <input id="name" formControlName="name">
+      <div *ngIf="form.get('name')?.invalid && form.get('name')?.touched">
+        <small *ngIf="form.get('name')?.errors?.['required'] ?? false">Name is required</small>
+      </div>
+    </div>
+
+    <div>
+      <label for="email">Email:</label>
+      <input id="email" formControlName="email">
+      <div *ngIf="form.get('email')?.invalid && form.get('email')?.touched">
+        <small *ngIf="form.get('email')?.errors?.['required'] ?? false">Email is required</small>
+        <small *ngIf="form.get('email')?.errors?.['email'] ?? false">Please enter a valid email</small>
+      </div>
+    </div>
+
+    <div formArrayName="skills">
+      <label>Skills:</label>
+      <div *ngFor="let skill of skills.controls; let i = index">
+        <input [formControlName]="i">
+        <button type="button" (click)="removeSkill(i)">Remove</button>
+      </div>
+      <button type="button" (click)="addSkill()">Add Skill</button>
+    </div>
+
+    <button type="submit" [disabled]="form.invalid">Submit</button>
+  </form>
+</div>

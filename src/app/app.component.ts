@@ -6,11 +6,12 @@ import { FormsModule } from '@angular/forms';
 import { NgTemplateComponent } from "./components/ng-template/ng-template.component";
 import { SignalExampleComponent } from "./components/signal-example/signal-example.component";
 import { SignalsRxjsComponent } from "./components/signals-rxjs/signals-rxjs.component";
+import { TemplateDrivenFormComponent } from "./components/template-driven-form/template-driven-form.component";
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterLink, FormsModule],
+  imports: [RouterOutlet, RouterLink, FormsModule, TemplateDrivenFormComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })

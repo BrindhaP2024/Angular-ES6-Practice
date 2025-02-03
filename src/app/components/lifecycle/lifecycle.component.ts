@@ -1,5 +1,7 @@
+import { routes } from './../../app.routes';
 import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy, SimpleChanges } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-lifecycle',
@@ -8,11 +10,15 @@ import { Component, Input, OnInit, OnChanges, DoCheck, AfterContentInit, AfterCo
   styleUrls: ['./lifecycle.component.css'],
 })
 export class LifecycleComponent implements OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
-  
+
   @Input() name: string = '';
   lifecycleLog: string[] = [];
 
-  constructor() {
+  constructor(private routes:ActivatedRoute) {
+
+    this.routes.queryParams.subscribe((params: any) => console.log(params));
+    this.routes.fragment.subscribe((fragment: any) => console.log(fragment));
+
     this.logLifecycleEvent('Constructor');
   }
 

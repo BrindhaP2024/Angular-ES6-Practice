@@ -1,0 +1,9 @@
+<div class="container">
+  <h2>Data Retrieved</h2>
+  <div *ngIf="data">
+    <pre>{{ data | json }}</pre>
+  </div>
+</div>
+<div>
+  <button (click)="postData()">Post Data</button>
+</div>

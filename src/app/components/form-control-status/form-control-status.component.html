@@ -1,0 +1,55 @@
+<div class="container">
+  <h2>Angular Form Validation Example</h2>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
+
+    <!-- Name Input Field -->
+    <div class="form-group" [ngClass]="{
+      'ng-valid': form.controls['name'].valid,
+      'ng-invalid': form.controls['name'].invalid,
+      'ng-dirty': form.controls['name'].dirty,
+      'ng-pristine': form.controls['name'].pristine,
+      'ng-touched': form.controls['name'].touched,
+      'ng-untouched': form.controls['name'].untouched
+    }">
+      <label for="name">Name</label>
+      <input id="name" type="text" formControlName="name" class="form-control" />
+      <div *ngIf="form.controls['name'].invalid && form.controls['name'].touched" class="error-message">
+        Name is required and must be at least 3 characters long.
+      </div>
+    </div>
+    <br>
+
+    <!-- Email Input Field -->
+    <div class="form-group" [ngClass]="{
+      'ng-valid': form.controls['email'].valid,
+      'ng-invalid': form.controls['email'].invalid,
+      'ng-dirty': form.controls['email'].dirty,
+      'ng-pristine': form.controls['email'].pristine,
+      'ng-touched': form.controls['email'].touched,
+      'ng-untouched': form.controls['email'].untouched
+    }">
+      <label for="email">Email</label>
+      <input id="email" type="email" formControlName="email" class="form-control" />
+      <div *ngIf="form.controls['email'].invalid && form.controls['email'].touched" class="error-message">
+        A valid email is required.
+      </div>
+    </div>
+   <br>
+    <div class="form-group" [ngClass]="{
+      'ng-valid': form.controls['password'].valid,
+      'ng-invalid': form.controls['password'].invalid,
+      'ng-dirty': form.controls['password'].dirty,
+      'ng-pristine': form.controls['password'].pristine,
+      'ng-touched': form.controls['password'].touched,
+      'ng-untouched': form.controls['password'].untouched
+    }">
+      <label for="password">Password</label>
+      <input id="password" type="password" formControlName="password" class="form-control" />
+      <div *ngIf="form.controls['password'].invalid && form.controls['password'].touched" class="error-message">
+        Password is required and must be at least 8 characters long.
+      </div>
+    </div>
+  <br>
+    <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Submit</button>
+  </form>
+</div>

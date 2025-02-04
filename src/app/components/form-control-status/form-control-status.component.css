@@ -1,0 +1,29 @@
+
+.error-message {
+  color: red;
+  font-size: 12px;
+}
+
+.ng-valid {
+  border-color: green;
+}
+
+.ng-invalid {
+  border-color: red;
+}
+
+.ng-dirty {
+  background-color: #f9f9f9;
+}
+
+.ng-pristine {
+  background-color: #fff;
+}
+
+.ng-untouched {
+  border-color: #ccc;
+}
+
+.ng-touched {
+  border-color: blue;
+}

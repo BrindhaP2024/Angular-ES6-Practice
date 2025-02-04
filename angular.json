@@ -27,10 +27,12 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": [],
-            "server": "src/main.server.ts",
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+            ],
             "outputMode": "server",
             "ssr": {
               "entry": "src/server.ts"
@@ -68,7 +70,7 @@
             },
             "development": {
               "buildTarget": "Angular-test-app:build:development",
-               "hmr":false
+               "hmr": false
             }
           },
           "defaultConfiguration": "development"
@@ -91,9 +93,12 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+            ]
           }
         }
       }

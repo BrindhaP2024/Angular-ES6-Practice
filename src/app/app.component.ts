@@ -7,6 +7,7 @@ import { NgTemplateComponent } from "./components/ng-template/ng-template.compon
 import { SignalExampleComponent } from "./components/signal-example/signal-example.component";
 import { SignalsRxjsComponent } from "./components/signals-rxjs/signals-rxjs.component";
 import { TemplateDrivenFormComponent } from "./components/template-driven-form/template-driven-form.component";
+import { UserManagementComponent } from "./components/user-management/user-management.component";
 
 
 @Component({

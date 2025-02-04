@@ -30,6 +30,9 @@ import { CustomDirectiveDirective } from './components/custom-directive.directiv
 import { DataListComponent } from './components/data-list/data-list.component';
 import { SignalExampleComponent } from './components/signal-example/signal-example.component';
 import { SignalsRxjsComponent } from './components/signals-rxjs/signals-rxjs.component';
+import { UserManagementComponent } from './components/user-management/user-management.component';
+import { TemplateDrivenFormComponent } from './components/template-driven-form/template-driven-form.component';
+import { ReactiveDrivenFormComponent } from './components/reactive-driven-form/reactive-driven-form.component';
 
 
 
@@ -160,10 +163,19 @@ export const routes: Routes = [
   component:SignalsRxjsComponent
   },
   {
+    path:'user-management',
+    component:UserManagementComponent
+  },{
+    path:'template-driven',
+    component:TemplateDrivenFormComponent
+  },
+  {
+    path:'reactive-driven-form',
+    component:ReactiveDrivenFormComponent
+  },
+  {
         path: '**',
         component:HomeComponent,
         title: 'Not Found'
   },
-
-
 ];

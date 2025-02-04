@@ -1,0 +1,46 @@
+<!-- @if -->
+ <button (click) = "morningToggle()">Toggle</button>
+ @if(isMorning){
+  <div>
+    Good Morning wishes!
+  </div>
+}
+@else{
+  <div>
+    Good evening wishes
+  </div>
+}
+
+
+<!-- @for -->
+
+@for(message of msg; track message.id){
+  <div>
+    <h2>{{message.message}}</h2>
+  </div>
+}
+
+
+<div class="row text-center">
+  <div class="col-12">
+    <button class="btn btn-primary" (click) = "set(1)">1st Grade</button>
+    <button class="btn btn-primary" (click) = "set(2)">2nd Grade</button>
+    <button class="btn btn-danger" (click) = "set(3)">3rd Grade</button>
+  </div>
+  <div class="m-3">
+    @switch (grade) {
+      @case (1) {
+        You have secured Grade 1
+      }
+      @case (2){
+        You have secured Grade 2
+      }
+      @case (3) {
+       You have secured Grade 3
+      }
+      @default {
+        No results found
+      }
+    }
+  </div>
+</div>

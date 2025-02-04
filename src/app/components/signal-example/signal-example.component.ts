@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, computed, effect, inject, signal } from '@angular/core';
-import { UserService } from './../../user-service.service'; // Correct import of the service
+import { UserService } from '../../Service/user-service.service';
+
 
 @Component({
   selector: 'app-signal-example',

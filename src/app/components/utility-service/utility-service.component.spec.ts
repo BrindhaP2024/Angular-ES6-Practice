@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HttpDataComponent } from './http-data.component';
+import { UtilityServiceComponent } from './utility-service.component';
 
-describe('HttpDataComponent', () => {
-  let component: HttpDataComponent;
-  let fixture: ComponentFixture<HttpDataComponent>;
+describe('UtilityServiceComponent', () => {
+  let component: UtilityServiceComponent;
+  let fixture: ComponentFixture<UtilityServiceComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HttpDataComponent]
+      imports: [UtilityServiceComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(HttpDataComponent);
+    fixture = TestBed.createComponent(UtilityServiceComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

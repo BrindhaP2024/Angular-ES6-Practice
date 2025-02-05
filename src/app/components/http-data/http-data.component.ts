@@ -1,17 +1,16 @@
-import { JsonPipe, NgIf } from '@angular/common';
+import { CommonModule, JsonPipe, NgIf } from '@angular/common';
 import { HttpClient, HttpClientModule, HttpHeaders } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-http-data',
   standalone: true,
-  imports: [NgIf, JsonPipe, HttpClientModule],
+  imports: [NgIf, JsonPipe, CommonModule],
   templateUrl: './http-data.component.html',
   styleUrls: ['./http-data.component.css']
 })
 export class HttpDataComponent implements OnInit {
   data: any;
-  data1: any;
 
   constructor(private http: HttpClient) {}
 
@@ -19,22 +18,40 @@ export class HttpDataComponent implements OnInit {
     this.getData();
   }
 
-  getData1(): void {
-    this.http.get('https://dummy-json.mock.beeceptor.com/roles').subscribe(response => {
-      this.data1 = response;
-    });
-  }
-
+  // GET request
   getData(): void {
-    this.http.get('https://dummyjson.com/test').subscribe(response => {
+    this.http.get('https://jsonplaceholder.typicode.com/posts').subscribe(response => {
       this.data = response;
     });
   }
 
+  // POST request
   postData(): void {
     const newPost = { title: 'New Post', content: 'This is the content of the new post' };
-    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-    this.http.post('https://dummyjson.com/posts', newPost, { headers }).subscribe(response => {
+    this.http.post('https://jsonplaceholder.typicode.com/posts', newPost).subscribe(response => {
+      this.data = response;
+    });
+  }
+
+  // PUT request
+  putData(postId: number): void {
+    const updatedPost = { title: 'Updated Post', content: 'This is the updated content of the post' };
+    this.http.put(`https://jsonplaceholder.typicode.com/posts/${postId}`, updatedPost).subscribe(response => {
+      this.data = response;
+    });
+  }
+
+  // PATCH request
+  patchData(postId: number): void {
+    const partialUpdate = { title: 'Partially Updated Title' };
+    this.http.patch(`https://jsonplaceholder.typicode.com/posts/${postId}`, partialUpdate).subscribe(response => {
+      this.data = response;
+    });
+  }
+
+  // DELETE request
+  deleteData(postId: number): void {
+    this.http.delete(`https://jsonplaceholder.typicode.com/posts/${postId}`).subscribe(response => {
       this.data = response;
     });
   }

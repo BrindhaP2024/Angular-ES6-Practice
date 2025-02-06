@@ -7,11 +7,13 @@ import { NgTemplateComponent } from "./components/ng-template/ng-template.compon
 import { SignalExampleComponent } from "./components/signal-example/signal-example.component";
 import { SignalsRxjsComponent } from "./components/signals-rxjs/signals-rxjs.component";
 import { TemplateDrivenFormComponent } from "./components/template-driven-form/template-driven-form.component";
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from "./components/home/home.component";
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterLink, FormsModule, TemplateDrivenFormComponent],
+  imports: [RouterOutlet, RouterLink, FormsModule, TemplateDrivenFormComponent, HomeComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })

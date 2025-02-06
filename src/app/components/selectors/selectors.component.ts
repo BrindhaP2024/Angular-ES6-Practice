@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SampleSelectorComponent } from "../sample-selector/sample-selector.component";
+
 import { CardComponent } from '../card/card.component';
 
 @Component({
@@ -7,18 +7,18 @@ import { CardComponent } from '../card/card.component';
   template: `
     <div class="container">
       <!-- Type selector example -->
-      <app-sample-selector></app-sample-selector>
-      
+      <!-- <app-sample-selector></app-sample-selector> -->
+
       <!-- Attribute selector example -->
       <div dropzone>
         <p>Attribute selector content</p>
       </div>
-      
+
       <!-- Class selector example -->
       <div class="menu-item">
         <p>Class selector content</p>
       </div>
-      
+
       <!-- Combining selectors example with :not pseudo-class -->
       <button dropzone type="reset">Reset Button</button>
     </div>
@@ -54,7 +54,7 @@ import { CardComponent } from '../card/card.component';
       }
     `
   ],
-  imports: [SampleSelectorComponent]
+  imports: []
 })
 export class SelectorsComponent {}
 

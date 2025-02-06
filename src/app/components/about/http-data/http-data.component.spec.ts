@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SampleSelectorComponent } from './sample-selector.component';
+import { HttpDataComponent } from './http-data.component';
 
-describe('SampleSelectorComponent', () => {
-  let component: SampleSelectorComponent;
-  let fixture: ComponentFixture<SampleSelectorComponent>;
+describe('HttpDataComponent', () => {
+  let component: HttpDataComponent;
+  let fixture: ComponentFixture<HttpDataComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SampleSelectorComponent]
+      imports: [HttpDataComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(SampleSelectorComponent);
+    fixture = TestBed.createComponent(HttpDataComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

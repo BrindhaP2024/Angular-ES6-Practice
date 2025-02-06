@@ -1,0 +1,12 @@
+<div class="container">
+  <h2>Data Retrieved</h2>
+  <div *ngIf="data">
+    <pre>{{ data | json }}</pre>
+  </div>
+</div>
+<div>
+  <button (click)="postData()">Post Data</button>
+  <button (click)="putData(1)">Update Data (Post ID 1)</button>
+  <button (click)="patchData(1)">Partially Update Data (Post ID 1)</button>
+  <button (click)="deleteData(1)">Delete Data (Post ID 1)</button>
+</div>

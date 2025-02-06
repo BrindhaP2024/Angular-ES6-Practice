@@ -9,7 +9,6 @@ import { RdfExampleComponent } from './components/rdf-example/rdf-example.compon
 import { LifecycleComponent } from './components/lifecycle/lifecycle.component';
 import { StyleComponent } from './components/style/style.component';
 import { SelectorsComponent } from './components/selectors/selectors.component';
-import { SampleSelectorComponent } from './components/sample-selector/sample-selector.component';
 import { ChildComponent } from './components/child/child.component';
 import { ParentComponent } from './components/parent/parent.component';
 import { CardComponent } from './components/card/card.component';
@@ -30,6 +29,8 @@ import { CustomDirectiveDirective } from './components/custom-directive.directiv
 import { DataListComponent } from './components/data-list/data-list.component';
 import { SignalExampleComponent } from './components/signal-example/signal-example.component';
 import { SignalsRxjsComponent } from './components/signals-rxjs/signals-rxjs.component';
+import { HttpDataComponent } from './components/http-data/http-data.component';
+import { DataTableComponent } from './components/data-table/data-table.component';
 
 
 
@@ -83,10 +84,7 @@ export const routes: Routes = [
         path:'card',
         component:CardComponent,
     },
-    {
-        path:'sample-selector',
-        component:SampleSelectorComponent,
-    },
+
     {
         path:'hostname-example',
         component:HostnameExampleComponent,
@@ -158,6 +156,14 @@ export const routes: Routes = [
   {
   path:'signal-rxjs',
   component:SignalsRxjsComponent
+  },
+  {
+    path:'http-client-data',
+    component:HttpDataComponent
+  },
+  {
+    path:'data-table',
+    component:DataTableComponent
   },
   {
         path: '**',

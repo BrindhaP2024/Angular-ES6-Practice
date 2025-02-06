@@ -1,0 +1,56 @@
+<div class="container">
+  <h2>Data Table</h2>
+
+  <!-- Form for adding or updating users -->
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" formControlName="name">
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" formControlName="email">
+    </div>
+    <div>
+      <label for="framework">Favorite Framework:</label>
+      <input type="text" id="framework" formControlName="favoriteFramework">
+    </div>
+    <div>
+      <label for="password">Password:</label>
+      <input type="password" id="password" formControlName="password">
+    </div>
+    <button type="submit">{{ editMode ? 'Update' : 'Submit' }}</button>
+    <button type="button" *ngIf="editMode" (click)="cancelEdit()">Cancel</button>
+  </form>
+
+  <!-- Table for displaying user data -->
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Favorite Framework</th>
+        <th>Password</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of data">
+        <td>{{ user.id }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.favoriteFramework }}</td>
+        <td>{{ user.password }}</td>
+        <td>
+          <button (click)="enableEdit(user.id)">Edit</button>
+          <button (click)="deleteData(user.id)">Delete</button>
+          <button (click)="patchData(user.id)">Patch</button>
+        </td>
+      </tr>
+      <tr *ngIf="data.length === 0">
+        <td colspan="6">No users available.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,17 @@
+<p>item-list works!</p>
+<h2>Item List</h2>
+<div class="grid-container">
+  <div class="grid-header">Name</div>
+  <div class="grid-header">Description</div>
+  <div class="grid-header">Actions</div>
+  @for (item of items; track item.id) {
+    <div class="grid-row">
+      <div class="grid-cell">{{ item.name }}</div>
+      <div class="grid-cell">{{ item.description }}</div>
+      <div class="grid-cell">
+        <button (click)="editItem(item)">Edit</button>
+        <button (click)="deleteItem(item.id)">Delete</button>
+      </div>
+    </div>
+  }
+</div>

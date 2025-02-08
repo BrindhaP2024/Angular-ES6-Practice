@@ -1,0 +1,71 @@
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  border: 1px solid #ccc;
+  background: linear-gradient(135deg, #e3eb7f, #7991b9);
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.grid-header {
+  background: #c975bb;
+  color: rgb(255, 255, 255);
+  text-align: left;
+  padding: 12px 15px;
+  font-weight: bold;
+  border: 1px solid #ddd;
+}
+
+
+.grid-row {
+  display: contents;
+}
+
+.grid-cell {
+  background: white;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+/* Button styling */
+button {
+  color: rgb(216, 57, 189);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+  margin: 5px;
+}
+
+/* Edit button styling */
+button.edit-button {
+  background-color: #87CEEB;
+}
+
+button.edit-button:hover {
+  background-color: #4682B4;
+}
+
+/* Delete button styling */
+button.delete-button {
+  background-color: #FFA07A;
+}
+
+button.delete-button:hover {
+  background-color: #FF4500;
+}
+
+/* Search input styling */
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}

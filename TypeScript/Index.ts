@@ -48,6 +48,9 @@ enum Color {
   console.log(greet(user)); 
   // class and functions and extends
   class Animal {
+    makeSound() {
+        throw new Error("Method not implemented.");
+    }
     name: string;
     constructor(name: string) {
       this.name = name;
@@ -57,13 +60,13 @@ enum Color {
     }
   }
   
-  class Dog extends Animal {
+  class Dogs extends Animal {
     bark() {
       console.log("Woof! Woof!");
     }
   }
   
-const dog = new Dog("Rex");
+const Dog1= new Dog("Rex");
 dog.bark();        
 dog.move(10);     
 
